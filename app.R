@@ -45,15 +45,15 @@ ui <- page_sidebar(
         selectInput(
           inputId = "ntprobnp_af",
           label = "NT-proBNP (pg/mL) with atrial fibrillation",
-          choices = appvar_values$shf_ntprobnp,
-          selected = appvar_values$shf_ntprobnp,
+          choices = appvar_values$shf_ntprobnp_af,
+          selected = appvar_values$shf_ntprobnp_af,
           multiple = TRUE
         ),
         selectInput(
           inputId = "ntprobnpnoaf_af",
           label = "NT-proBNP (pg/mL) without atrial fibrillation",
-          choices = appvar_values$shf_ntprobnp,
-          selected = appvar_values$shf_ntprobnp,
+          choices = appvar_values$shf_ntprobnp_noaf,
+          selected = appvar_values$shf_ntprobnp_noaf,
           multiple = TRUE
         )),
       conditionalPanel(
