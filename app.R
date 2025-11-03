@@ -42,20 +42,9 @@ ui <- page_sidebar(
       checkboxInput("byaf", "Separate NT-proBNP by atrial fibrillation"),
       conditionalPanel(
         condition = "input.byaf == true",
-        selectInput(
-          inputId = "ntprobnp_af",
-          label = "NT-proBNP (pg/mL) with atrial fibrillation",
-          choices = appvar_values$shf_ntprobnp_af,
-          selected = appvar_values$shf_ntprobnp_af[2],
-          multiple = TRUE
+        p("NT-proBNP (pg/mL) with atrial fibrillation > 900"),
+        p("NT-proBNP (pg/mL) without atrial fibrillation > 300"),
         ),
-        selectInput(
-          inputId = "ntprobnpnoaf_af",
-          label = "NT-proBNP (pg/mL) without atrial fibrillation",
-          choices = appvar_values$shf_ntprobnp_noaf,
-          selected = appvar_values$shf_ntprobnp_noaf[2],
-          multiple = TRUE
-        )),
       conditionalPanel(
         condition = "input.byaf == false",
         selectInput(
